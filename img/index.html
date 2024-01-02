@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #content {
+        color: red;
+      }
+      #content1 {
+        color: skyblue;
+      }
+      #menuitems li{
+            display:inline;
+            background-color: aquamarine;
+      }
+      #menuitems {
+        display: none;
+      } */
+    </style>
+  </head>
+  <body>
+    <ul id="menuitems">
+      <li>hasan1</li>
+      <li>hasan2</li>
+      <li>hasan3</li>
+      <li>hasan4</li>
+      <li>hasan5</li>
+    </ul>
+    <div id="contentList">
+      <div id="content1">Ahadi hasan</div>
+      <div id="content2">Ahadi hasan</div>
+      <div id="content4">Ahadi hasan</div>
+      <div id="content5">Ahadi hasan</div>
+      <div id="content6">Ahadi hasan</div>
+    </div>
+    <!-- <button onclick="changeColor()">Change Color</button>
+    <button onclick="showList()">Show List</button>
+    <button onclick="hideList()">Hide List</button> -->
+    <button onclick="addNewListItemv2()">Add list item</button>
+    <button onclick="showList()">Show List</button>
+    <button onclick="AddList()">Add List</button>
+    <script>
+      window.document.getElementById("content1").style.color = "red";
+      function addNewListItemv2() {
+        let addLine = "<div id='content'>Ahadi hasan</div>";
+        let line = window.document.getElementById("contentList").innerHTML;
+        window.document.getElementById("contentList").innerHTML =
+          line + addLine;
+      }
+
+      function showList() {
+        window.document.getElementById("menuitems").style.display =
+          "inline-block";
+      }
+
+      function AddList() {
+        let addLine = " <li>hasan6</li>";
+        let line = window.document.getElementById("menuitems").innerHTML;
+        window.document.getElementById("menuitems").innerHTML = line + addLine;
+      }
+    </script>
+  </body>
+</html>
